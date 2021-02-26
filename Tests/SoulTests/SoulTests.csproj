@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SoulIO\SoulIO.csproj" />
+    <ProjectReference Include="..\Libraries\SoulIO\SoulIO.csproj" />
   </ItemGroup>
 
 </Project>

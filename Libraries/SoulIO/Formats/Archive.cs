@@ -152,6 +152,17 @@ namespace SoulIO.Formats
                 _count = _read.ReadInt32();
                 _children = new List<Child>();
 
+                if (0x04 + 0x04 * _count > InputStream.Length)
+                    throw new InvalidDataException();
+
+                InputStream.Position = 0x04 + 0x04 * _count;
+                _length = _read.ReadInt32();
+
+                if (InputStream.Length != _length)
+                    throw new InvalidDataException();
+
+                InputStream.Position = 0x04;
+
                 for (Int32 i = 0; i < _count; i++)
                 {
                     var _item = new Child();
@@ -167,11 +178,6 @@ namespace SoulIO.Formats
 
                     _children.Add(_item);
                 }
-
-                _length = _read.ReadInt32();
-
-                if (InputStream.Length != _length)
-                    throw new InvalidDataException();
 
                 _children.ForEach(
                     delegate (Child _item)

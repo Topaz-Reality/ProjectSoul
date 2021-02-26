@@ -1,10 +1,10 @@
-using ArchiveEditor.ViewModels;
-using ArchiveEditor.Views;
+using ArchiveTool.ViewModels;
+using ArchiveTool.Views;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 
-namespace ArchiveEditor
+namespace ArchiveTool
 {
     public class App : Application
     {

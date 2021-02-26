@@ -1,9 +1,9 @@
-using ArchiveEditor.ViewModels;
+using ArchiveTool.ViewModels;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
 using System;
 
-namespace ArchiveEditor
+namespace ArchiveTool
 {
     public class ViewLocator : IDataTemplate
     {
